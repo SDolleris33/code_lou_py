@@ -1,3 +1,7 @@
+from datetime import datetime
+import random
+import sys
+
 
 #global var
 
@@ -29,18 +33,19 @@ def menu():
 	-Exit (Type exit)\n""")
 	
 	
-def cart_logs(item):
+	
+def cart_logs(item,num):
 	"""adds game to cart_items and game cost to cart_sum"""
 	
-	cart_items.append(item)
+	cart_items.append(item[num])
 	cart_sum.append(item[2])
+	return len(cart_items)
 		
 def display_games():
+	"""Print formatted game inventory"""
 	print("# \tTitle\t\tPrice")
 	for game in game_inv:
 		print(f"{game[0]} {game[1]}\t{game[2]}")
-
-
 
 
 
@@ -61,12 +66,12 @@ while True:
 			for i,t,p in game_inv:
 				if select == i:
 					i = i - 1
-					cart_items.append(game_inv[i])
+					cart_logs(game_inv,i)
 					print(f'{t} ${p}')
 					print(f'Cart items: {len(cart_items)}')
 					print(cart_items)
-			cart_y_n = input('Finished adding to cart? (y/n): ').lower()
-			if cart_y_n == 'y':
+			cart_cfm = input('Finished adding to cart? (y/n): ').lower()
+			if cart_cfm == 'y':
 				break
 	elif nav == 'buy':
 		if len(cart_items) == 0:
@@ -75,12 +80,25 @@ while True:
 			print(f'Cart:\n {cart_items}')
 			
 	elif nav == 'admin':
-		print('admin')
+		username = input("Enter Admin UserID: ")
+		password = input("Enter Password: ")
+		if username == "Admin" and password == "password":
+			game = []
+			game.append(len(game_inv)+1)
+			game.append(input("Enter game Title: "))
+			game.append(input("Enter price !!! dont not include '$' !!!: "))	
+			game_inv.append(game)
+			print(f"Added: {game}")
+		else:
+			print('Incorrect Username/Password')
+							 
 	else:
 		print('Thank you for visting GameRx!')
 		break
 		
-print('end')
+
+		
+
 		   
 		   		
 	
