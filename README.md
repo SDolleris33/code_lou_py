@@ -1,9 +1,9 @@
 ----ABOUT----
 This repo includes the entirety of my PYTHON project.
-The project is a comprehensive inventory program; that allows input through various phases contained within a Master Loop. The loop is based on conditional 'if' statements that are passed by sting values.
--The inital phase:
+The project is a comprehensive inventory program; that allows input through various phases contained within a Master Loop. The loop is based on conditional 'if' statements that are passed by string values.
+\n-The inital phase:
  Introduction script that displays allowed input through menu().
--Second phase:
+\n-Second phase:
  
 
 
