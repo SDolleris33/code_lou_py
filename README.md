@@ -5,7 +5,7 @@ This repo includes the entirety of my PYTHON project. The project is a comprehen
 -Second phase: variable containing user input that is coericed as a string 
 -Third Phase: Block of if statements which are passed by user input leading to: games,cart,buy,admin, and exit
 
-My project fulfills the requirements: -List of lists containing inventory details -While Master Loop with break kw -4 functions each called appropriately -import and use of datetime.datetime module and function -import and use of random
+My project fulfills the requirements: -List of lists containing inventory details -While Master Loop with break kw -5 functions each called appropriately -import and use of datetime.datetime module and function -import and use of random
 
 Ive learned Python is a deep deep rabbit hole. It has been a blind dive learning this language especially as a new programmer. Admittedly I did struggle through out this course. Sometimes I found the lectures challenging to understand. I still have much to learn. Which is why I really appreciate being a student of Code Louisville. Thank you to all the mentors. Will Tirone really helped me out. I found myself in a pinch in the last week; being overwhelmed by the project I had in mind. I ultimately scraped it. Mr. Tirone suggested this kind of python project. Big life saver! Thank you all once again. Enjoy the holidays and finally the end of 2020. See you all next year in the SQL class.
 
