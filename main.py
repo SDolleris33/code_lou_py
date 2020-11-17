@@ -4,11 +4,11 @@
 NAV_CONT = ('games', 'cart', 'buy', 'admin', 'exit')
    
 game_inv = [                     #product inventory compiled list title,stock,price
-	['Ghost of Tsushima',10,60],
-	['Grand Theft Auto 5',10,35],
-	['Spider Man      ',10,20],
-	['Call of Duty   ',10,20],
-	['Mortal Kombat 11',10,20]
+	[1,'Ghost of Tsushima',60],
+	[2,'Grand Theft Auto 5',35],
+	[3,'Spider Man      ',20],
+	[4,'Call of Duty   ',20],
+	[5,'Mortal Kombat 11',20]
 	
 ]
 
@@ -23,10 +23,11 @@ def menu():
 	print("""\t  ---GameRx--- 
 	"Dose up on Games"\n
 	-View our Games (Type games)
-	-View Cart (Type cart)  
+	-Add to Cart (Type cart)  
 	-Checkout (Type buy)   
 	-Admin(Type admin)   
 	-Exit (Type exit)\n""")
+	
 	
 def cart_logs(item):
 	"""adds game to cart_items and game cost to cart_sum"""
@@ -35,9 +36,11 @@ def cart_logs(item):
 	cart_sum.append(item[2])
 		
 def display_games():
-	print("\tTitle\t\tIn Stock\tPrice")
+	print("# \tTitle\t\tPrice")
 	for game in game_inv:
-		print(f"-{game[0]}\t  {game[1]}\t\t {game[2]}")
+		print(f"{game[0]} {game[1]}\t{game[2]}")
+
+
 
 
 
@@ -52,9 +55,25 @@ while True:
 	elif nav == 'games':
 		display_games()
 	elif nav == 'cart':
-		print('cart')
+		while True:
+			display_games()
+			select = int(input('What would you like to add to you cart; Type in the #? '))
+			for i,t,p in game_inv:
+				if select == i:
+					i = i - 1
+					cart_items.append(game_inv[i])
+					print(f'{t} ${p}')
+					print(f'Cart items: {len(cart_items)}')
+					print(cart_items)
+			cart_y_n = input('Finished adding to cart? (y/n): ').lower()
+			if cart_y_n == 'y':
+				break
 	elif nav == 'buy':
-		print('buy')
+		if len(cart_items) == 0:
+			print('You have no items in you cart')
+		else:
+			print(f'Cart:\n {cart_items}')
+			
 	elif nav == 'admin':
 		print('admin')
 	else:
