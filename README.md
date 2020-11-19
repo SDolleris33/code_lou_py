@@ -1,7 +1,7 @@
 ----Application Requirements---
 Python Version 3 or Higher
 datetime package
-Operate from terminal: file path to final.py
+Operate from terminal: file path to final1_1.py
 
 (The complete and final script within git repo is pushed as final1_1.py to avoid git diff comparisons)
 
