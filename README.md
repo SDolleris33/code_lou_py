@@ -9,11 +9,11 @@ Operate from terminal: file path to final_prj.py
 ----ABOUT---- 
 This repo includes the entirety of my PYTHON project. The project is a comprehensive inventory program; that allows input through various phases contained within a Master Loop. The loop is based on conditional 'if' statements that are passed by string values. Explicitly follow steps: 
 type:
-	games to show catalog of games 
-	add to add games to cart
-	buy to purchase games within cart
-	admin to access admin feature to update catalog
-	exit to exit program
+	- 'games' to show catalog of games 
+	- 'add' to add games to cart
+	- 'buy' to purchase games within cart
+	- 'admin' to access admin feature to update catalog
+	- 'exit' to exit program
 
 -admin access: username: 'Admin' password: 'password'
 
